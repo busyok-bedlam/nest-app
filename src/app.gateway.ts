@@ -25,7 +25,7 @@ export class AppGateway implements OnGatewayInit, OnGatewayConnection, OnGateway
   }
 
   @SubscribeMessage('message')
-  handleMessage(client: any, payload: any): string {
+  handleMessage(@MessageBody() payload: any): string {
     console.log('RECEIVE MESSAGE FROM CLIENT');
     console.log('PAYLOAD', payload)
     return 'Hello world!';
