@@ -7,13 +7,14 @@
 
     socket.on('msgToClient', (message) => {
         $('#message-block').append($('<div></div>').text(message));
-        $('#input').val('');
+        
     })
     const input = document.getElementById("input");
     const button = document.getElementById("message-button");
     button.addEventListener("click", (e) => {
         let value = input.value.trim() || null;
         e.preventDefault();
-        socket.emit('message', value)
+        socket.emit('message', value);
+        $('#input').val('');
     });
 })(jQuery)
