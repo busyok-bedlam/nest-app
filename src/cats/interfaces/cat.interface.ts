@@ -1,4 +1,4 @@
 export interface Cat {
-    readonly email: string;
-    readonly password: string;
+  readonly email: string;
+  readonly password: string;
 }

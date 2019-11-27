@@ -5,16 +5,15 @@ import { Cat } from './interfaces/cat.interface';
 
 @Controller('cats')
 export class CatsController {
-    constructor(private readonly catsService: CatsService) { }
+  constructor(private readonly catsService: CatsService) {}
 
-    @Post()
-    async create(@Body() createCatDto: CreateCatDto) {
+  @Post()
+  async create(@Body() createCatDto: CreateCatDto) {
+    return createCatDto;
+  }
 
-        return createCatDto
-    }
-
-    @Get()
-    async findAll(): Promise<Cat[]> {
-        return this.catsService.findAll();
-    }
+  @Get()
+  async findAll(): Promise<Cat[]> {
+    return this.catsService.findAll();
+  }
 }
