@@ -43,8 +43,8 @@ export class ChatGateway
     @ConnectedSocket() client: Socket,
   ) {
     client.broadcast.emit('msgToClient', data);
-    // throw new WsException('Invalid credentials.');
 
+		// throw new WsException('Invalid credentials.');
     return { event: 'msgToClient', data };
   }
 
