@@ -8,6 +8,7 @@ const validation = query => {
 		return false;
 	}
 }
+
 @Injectable()
 export class CatsGuard implements CanActivate {
   canActivate(
